@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2基础HTML,css编码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            padding: 15px;
+            /*height: 50px;*/
+            background-color: #666;
+        }
+
+        nav h1 {
+            float: left;
+        }
+
+        nav h1 img {
+            width: 70px;
+        }
+
+        nav ul {
+            float: right;
+        }
+
+        nav ul li {
+            float: left;
+            margin-left: 15px;
+            list-style-type: disc;
+            color: #000;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav::after,
+        nav ul::after {
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        .container section {
+            margin-bottom: 20px;
+            padding: 25px;
+            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .4);
+            background-color: #fff;
+        }
+
+        .container section:last-child {
+            margin-bottom: 0;
+        }
+
+        section form {
+            width: 100%;
+        }
+
+        section form>div {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        section form>div>label {
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            width: 49%;
+            padding-right: 10px;
+        }
+
+        section form>div>div {
+            display: inline-block;
+            width: 49%;
+        }
+
+        section form>div>div p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        section form input,
+        section form select {
+            padding: 3px;
+        }
+
+        section button {
+            width: 100%;
+            padding: 10px;
+        }
+
+        section textarea {
+            width: 60%;
+            height: 90px;
+            padding: 5px;
+        }
+
+        footer {
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1><img src="cat.jpg" alt=""></h1>
+        <ul>
+            <li><a href="#">导航链接一</a></li>
+            <li><a href="#">导航链接二</a></li>
+            <li><a href="#">导航链接三</a></li>
+            <li><a href="#">导航链接四</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>文章一级标题</h2>
+            <h2>文章二级标题</h2>
+            <p><span>文章作者</span><span>文章标题</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga optio quis maiores deserunt sint magni quidem
+                molestiae atque nemo id beatae nam cupiditate architecto, itaque, quasi at deleniti, animi alias!（这一段英文是通过输入lorem,再按TAB键得到的）</p>
+            <p><a href="http://ife.baidu.com">链接到http://ife.baidu.com</a> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Fuga optio quis maiores deserunt sint magni quidem molestiae atque nemo id beatae nam cupiditate architecto,
+                itaque, quasi at deleniti, animi alias!（Lorem ipsum dolor: 测试用的胡乱文字 ）</p>
+            <img src="cat.jpg" alt="cat">
+        </section>
+        <section>
+            <h2>文章一级标题</h2>
+            <h2>文章二级标题</h2>
+            <p><span>文章作者</span><span>文章标题</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga optio quis maiores deserunt sint magni quidem
+                molestiae atque nemo id beatae nam cupiditate architecto, itaque, quasi at deleniti, animi alias!（这一段英文是通过输入lorem,再按TAB键得到的）</p>
+            <p><a href="http://ife.baidu.com">链接到http://ife.baidu.com</a> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Fuga optio quis maiores deserunt sint magni quidem molestiae atque nemo id beatae nam cupiditate architecto,
+                itaque, quasi at deleniti, animi alias!（Lorem ipsum dolor: 测试用的胡乱文字 ）</p>
+            <img src="cat.jpg" alt="cat">
+            <ul>
+                <li>列表项目一</li>
+                <li>列表项目二</li>
+                <li>列表项目三</li>
+            </ul>
+        </section>
+        <section>
+            <h2>图片</h2>
+            <div>
+                <span>猫</span><br>
+                <img src="cat.jpg" alt="cat">
+            </div>
+            <div>
+                <span>猫</span><br>
+                <img src="cat.jpg" alt="cat">
+            </div>
+            <div>
+                <span>猫</span><br>
+                <img src="cat.jpg" alt="cat">
+            </div>
+        </section>
+        <section>
+            <h2>最后一篇文章一级标题</h2>
+            <h2>文章二级标题</h2>
+            <p><span>文章作者</span><span>文章发表时间</span></p>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+            <table border="1">
+                <tr>
+                    <th>表头</th>
+                    <th>表头</th>
+                    <th>表头</th>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>总计</td>
+                    <td colspan="2">1000</td>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>这里以后是一个侧栏</h2>
+            <h2>侧栏注册窗口标题</h2>
+            <form>
+                <div>
+                    <label for="email">请输入邮箱地址</label>
+                    <div>
+                        <input id="email" type="text" name="" value="" placeholder="这是一个文本输入框">
+                        <p>邮箱地址请按格式要求输入</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="pwd">请输入密码</label>
+                    <div>
+                        <input id="pwd" type="password" placeholder="这是一个文本输入框">
+                    </div>
+                </div>
+                <div>
+                    <label for="pwd2">请重复输入密码</label>
+                    <div>
+                        <input id="pwd2" type="password" placeholder="这是一个文本输入框">
+                        <p>密码请为6-16位英文数字</p>
+                    </div>
+                </div>
+                <div>
+                    <label>性别</label>
+                    <div>
+                        <input id="man" type="radio" name="sex" value="男">
+                        <label for="man">男</label>
+                        <input id="woman" type="radio" name="sex" value="女">
+                        <label for="woman">女</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="">城市</label>
+                    <div>
+                        <select name="" id="">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="成都" selected>成都</option>
+                    </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="">爱好</label>
+                    <div>
+                        <input id="checkbox1" type="checkbox" value="运动"><label for="checkbox1">运动</label>
+                        <input id="checkbox2" type="checkbox" value="艺术"><label for="checkbox2">艺术</label>
+                        <input id="checkbox3" type="checkbox" value="科学"><label for="checkbox3">科学</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="textarea">个人描述</label>
+                    <div>
+                        <textarea id="textarea" rows="" cols="" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="">确认提交</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>版权所有&copy</p>
+    </footer>
+    </from>
+</body>
+
+</html>

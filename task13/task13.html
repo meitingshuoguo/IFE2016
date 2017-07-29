@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <style>
+    img {width: 200px;}
+    </style>
+  </head>
+<body>
+
+  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+  <img src="cat.jpg" alt="cat">
+  <h1></h1>
+  <button id="change">change user</button>
+<script type="text/javascript">
+
+(function() {
+  /*	
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+  var button = document.getElementById("button");
+  button.onclick = function(){
+    var inputValue = document.getElementById("aqi-input").value;
+    document.getElementById("aqi-display").firstChild.nodeValue=inputValue;
+  }
+
+  var myimg = document.querySelector("img");
+  myimg.onclick = function(){
+    var src = myimg.getAttribute("src");
+    if(src=="cat.jpg"){
+      myimg.setAttribute('src','bird.jpg');
+    }else if(src=="bird.jpg"){
+      myimg.setAttribute('src','cat.jpg');
+    }
+  }
+
+  var myButton = document.getElementById("change");
+  var myHeading = document.querySelector("h1");
+  function setUserName(){
+    var myName = prompt("please enter your name.");
+    localStorage.setItem('name',myName);
+    myHeading.innerHTML = 'Mozilla is cool,' + myName;
+  }
+  if(!localStorage.getItem('name')){
+      setUserName();
+    }else{
+      var storedName = localStorage.getItem('name');
+      myHeading.innerHTML = 'Mozilla is cool,' + storedName;
+    }
+    myButton.onclick = function(){
+      setUserName();
+    }
+})();
+
+</script>
+</body>
+</html>

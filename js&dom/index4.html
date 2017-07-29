@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img{
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li><a onclick = "showPic(this);return false;"  href="img/sea.jpg" title="The Sea">The Sea</a></li>
+        <li><a onclick = "showPic(this);return false;"  href="img/bird.jpg" title="The Bird">The Bird</a></li>
+        <li><a onclick = "showPic(this);return false;"  href="img/cat.jpg" title="The Cat">The Cat</a></li>
+    </ul>
+    <img id="placeholder" src="img/demo.png" alt="xxx">
+    <p id="description">Choose an image.</p>
+    <script>
+        function showPic(whichpic){
+            var source = whichpic.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src",source);
+            
+            var text = whichpic.getAttribute("title");
+            var description = document.getElementById("description");
+            description.firstChild.nodeValue = text;
+
+            window.open("http://www.baidu.com","popup","width=320,height=480");//弹出一个新浏览器窗口
+        }
+        // onclick = "showPic(this);return false;" 
+        // document.getElementsByTagName("a").onclick = function(){
+        //     showPic(this); 
+        //     return false;
+        // }
+    </script>
+</body>
+</html>

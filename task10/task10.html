@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10Flexbox布局练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding: 20px;
+            background-color: #fff;
+        }
+        #demo1 .parent{
+            display: flex;
+            height: 300px;
+            background-color: goldenrod;
+        }
+        #demo1 .child {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color: white;
+        }
+        #demo2 li {
+            list-style: none;
+        }
+        #demo2 .flex-container {
+            display: flex;
+            /*flex-flow: row wrap;*/
+            /*上面是简写形式，下面第一句是创建主轴，定义了伸缩项目放置在伸缩容器的方向*/
+            flex-direction: row; 
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        #demo2 .flex-item {
+            background-color: tomato;
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+            margin-top: 10px;
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+        }
+        #demo3 .flex-parent {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center; 
+        }
+        #demo3 .flex-item {
+            width: 150px;
+            margin: 20px;
+            border: 1px solid #f00;
+        }
+        #demo3 .item1 { height: 120px;}
+        #demo3 .item2 { height: 100px;}
+        #demo3 .item3 { height: 40px;}
+        #demo3 .item4 { height: 200px; border: 1px solid #0f0; }
+        /*#demo3 */
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Flexbox布局练习</h1>
+    <div class="demo" id="demo1">
+        <h3>水平垂直居中</h3>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+    <div class="demo" id="demo2">
+        <h3>六个子元素布局</h3>
+        <ul class="flex-container">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul>
+    </div>
+    <div class="demo" id="demo3">
+        <h3>taks10</h3>
+        <div class="flex-parent">
+            <div class="flex-item item1"></div>
+            <div class="flex-item item2"></div>
+            <div class="flex-item item3"></div>
+            <div class="flex-item item4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

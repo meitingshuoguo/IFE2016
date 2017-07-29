@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3双飞翼布局和圣杯布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #fff;
+        }
+/*双飞翼布局*/
+        .body {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #eee;
+        }
+
+        .body .container {
+            width: 100%;
+            float: left;
+        }
+
+        .body .container article {
+            padding: 20px;
+            margin-left: 220px;
+            margin-right: 140px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+
+        .body .left-aside {
+            float: left;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin-left: -100%;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+
+        .body .right-aside {
+            float: left;
+            width: 120px;
+            height: 200px;
+            margin-left: -120px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+
+        .body footer {
+            clear: both;
+        }
+        /*圣杯布局*/
+        .body2 {
+            width: 100%;
+            padding: 20px;
+            padding-left: 240px;
+            padding-right: 160px;
+            border: 1px solid #999;
+            background-color: #eee;
+        }
+        .body2::after {
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .body2 article {
+            float: left;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        .body2 .left-aside {
+            float: left;
+            position: relative;
+            left: -220px;
+            width: 200px;
+            padding: 20px;
+            margin-left: -100%;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        .body2 .right-aside {
+            float: left;
+            position: relative;
+            right: -140px;
+            width: 120px;
+            height: 300px;
+            padding: 20px;
+            margin-left: -120px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="container">
+            <article>
+                双飞翼布局
+            </article>
+        </div>
+        <aside class="left-aside">
+        </aside>
+
+        <aside class="right-aside">
+        </aside>
+        <footer>
+
+        </footer>
+    </div>
+    <div class="body2">
+        <article>圣杯布局</article>
+        <aside class="left-aside"></aside>
+        <aside class="right-aside"></aside>
+    </div>
+</body>
+
+</html>

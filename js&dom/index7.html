@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img{
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul id="imagegallery">
+        <li><a href="img/sea.jpg" title="The Sea">The Sea</a></li>
+        <li><a href="img/bird.jpg" title="The Bird">The Bird</a></li>
+        <li><a href="img/cat.jpg" title="The Cat">The Cat</a></li>
+    </ul>
+    <img id="placeholder" src="img/demo.png" alt="xxx">
+    <p id="description">Choose an image.</p>
+    <div id="testdiv"></div>
+    <script>
+        window.onload = function(){
+            var para = document.createElement("p");
+            var testdiv = document.getElementById("testdiv")
+            testdiv.appendChild(para);
+            var txt = document.createTextNode("Hello World!")
+            para.appendChild(txt);
+        }       
+    </script>
+</body>
+</html>

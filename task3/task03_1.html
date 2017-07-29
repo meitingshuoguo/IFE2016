@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3三栏布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 360px;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #eee;
+        }
+        .left-aside {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        .right-aside {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 120px;
+            height: 320px;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        article {
+            width: auto;
+            height: 100px;
+            margin-left: 220px;
+            margin-right: 140px;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        #units {
+            width: 10in;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            background-color: tomato;
+            font-style: italic;
+            font-variant: small-caps;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="left-aside">
+            
+        </aside>
+        <article>
+            
+        </article>
+        <aside class="right-aside">
+
+        </aside>
+    </div>
+    <div id="units"><del>你好Hello</del></div>
+</body>
+
+</html>

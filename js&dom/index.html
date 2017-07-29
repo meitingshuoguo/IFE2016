@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" title="gg">
+        dd
+    </div>
+    <script>
+        var lennon1 = Object();
+        lennon1.name = "John";
+        lennon1.year = 1940;
+        lennon1.living = false; 
+        var lennon2 = {name:"John",year:1940,living: false}
+        var beatles = {};
+        beatles.vocalist = lennon2;
+
+        console.log(beatles.vocalist.name);
+
+        var count = 1;
+        while(count<11){
+            // console.log(count);
+            count++;
+        }
+
+        var ct = 1;
+        do{
+            // console.log(ct);
+            ct++;
+        }while(ct<11);
+        console.log(document.getElementById("div1").getAttribute("title"));
+        // 实现一个getElementsByClassName方法 
+        function getElementsByClassName(node,classname){
+            if(node.getElementByClassName){
+                return node.getElementsByClassName(classname);
+            }else{
+                var result = new Array();
+                var elems = node.getElementsByTagName("*");
+                for(var i = 0;i<elems.length;i++){
+                    if(elems[i].className.indexOf(classname)!=-1){
+                        results[results.length]=elems[i];
+                    }
+                }
+                return results;
+            }
+        }
+        /*
+        通过setAttribute对文档做出修改后，再通过浏览器的查看源代码选项去查看文档的源代码时看到的仍将是改变前的
+        属性，也就是说，setAttribute做出的修改不会反映在文档本身的源代码里，这种“表里不一”的现象源自DOM的
+        工作模式：先加载文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容，这正是DOM的真正威力：
+        对页面内容进行刷新却不需要在浏览器里刷新页面。
+        */
+        document.getElementById("div1").setAttribute("title","aa");
+        console.log(document.getElementById("div1").getAttribute("title"));
+    </script>
+</body>
+</html>

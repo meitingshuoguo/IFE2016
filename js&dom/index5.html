@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img{
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li><a class="popup" href="img/sea.jpg" title="The Sea">The Sea</a></li>
+        <li><a href="img/bird.jpg" title="The Bird">The Bird</a></li>
+        <li><a href="img/cat.jpg" title="The Cat">The Cat</a></li>
+    </ul>
+    <img id="placeholder" src="img/demo.png" alt="xxx">
+    <p id="description">Choose an image.</p>
+    <script>
+        window.onload = function(){
+            var links = document.getElementsByTagName("a");
+            for(var i=0;i<links.length;i++){
+                if(links[i].getAttribute("class")=="popup"){
+                    links[i].onclick=function(){
+                        popUp(this.getAttribute("href"));
+                        return false;
+                    }
+                }
+            }
+        }
+        function popUp(winURL){
+            window.open(winURL,"popup","width=400,height=600");
+        }
+    </script>
+</body>
+</html>
